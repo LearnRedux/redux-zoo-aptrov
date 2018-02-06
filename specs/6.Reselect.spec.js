@@ -19,7 +19,7 @@ describe('Reselect', () => {
     expect(result).toBe(presenceFilter);
   });
 
-  it('getAnimalCount should return the numner of animals in the state', () => {
+  it('getAnimalCount should return the number of animals in the state', () => {
     const animals = [1,2,3];
     const result = getAnimalCount({ animals });
     expect(result).toBe(3);
