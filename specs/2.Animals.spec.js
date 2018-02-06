@@ -67,9 +67,9 @@ describe('Animals', () => {
     describe('receiveAnimal', () => {
 
       it('should receive an animal', () => {
-        const state = animals([], receiveAnimal());
+        const state = animals([], receiveAnimal('Panda'));
         expect(state).toHaveLength(1);
-        expect(state).toMatchObject([{}]);
+        expect(state).toMatchObject([{ name: 'Panda' }]);
       });
 
       it('should set the animal name', () => {
@@ -106,7 +106,7 @@ describe('Animals', () => {
         expect(state).toMatchObject([savio]);
       });
 
-      it('should set present true of was false', () => {
+      it('should set present true if was false', () => {
         const savio = { name: 'Savio', present: false };
         const state = animals([savio], receiveAnimal('Savio'));
         expect(state).toMatchObject([{ present: true }]);

@@ -43,7 +43,7 @@ describe('LoadAction', () => {
 
     it('animals reducer should replace the animals', () => {
       const state = animals([], loadSuccess(payload));
-      expect(state).toBe(payload.animals);
+      expect(state).toMatchObject(payload.animals);
     });
 
     it('combined state should match payload', () => {
